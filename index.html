@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>IT-Koolitused</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #002b80;
+      color: white;
+    }
+    nav {
+      background-color: #001a4d;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    .subtitle {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+    }
+    .circle-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .circle {
+      border: 6px solid #1a4fff;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .courses {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .courses button {
+      background-color: white;
+      color: #002b80;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .cta-button {
+      background: linear-gradient(to right, #1a4fff, #5fa3ff);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.2em;
+      cursor: pointer;
+      animation: flash 2s infinite;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #3f78ff, #7fbfff);
+    }
+    @keyframes flash {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="meist.html">Meist</a>
+    <a href="koolitused.html">Koolitused</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <header>
+    <h1>IT-KOOLITUSED</h1>
+    <div class="subtitle">Pakume koolitusi nii ettevõtetele kui ka eraisikutele</div>
+
+    <div class="circle-container">
+      <div class="circle"><img src="koolitaja1.jpg" alt="Maarja Sepp"></div>
+      <div class="circle"><img src="koolitaja2.jpg" alt="Tiina Kroll"></div>
+      <div class="circle"><img src="koolitaja3.jpg" alt="Anneli Sepp"></div>
+      <div class="circle"><img src="koolitaja4.jpg" alt="Änn Jõgi"></div>
+      <div class="circle"><img src="koolitaja5.jpg" alt="Mark-Henri Möllits"></div>
+    </div>
+
+    <div class="courses">
+      <button>AI</button>
+      <button>Canva</button>
+      <button>Figma</button>
+      <button>WordPress</button>
+      <button>Küberturvalisus</button>
+    </div>
+
+    <a href="koolitused.html">
+      <button class="cta-button">Vaata koolitusi</button>
+    </a>
+  </header>
+
+</body>
+</html>

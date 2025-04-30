@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt – IT-Koolitused</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #002b80;
+      color: white;
+    }
+    nav {
+      background-color: #001a4d;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #001f5c;
+      border-radius: 12px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background-color: #1a4fff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      width: auto;
+      padding: 12px 30px;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Avaleht</a>
+    <a href="meist.html">Meist</a>
+    <a href="koolitused.html">Koolitused</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <main>
+    <h1>Võta meiega ühendust</h1>
+    <p>Kui sul on küsimusi koolituste kohta või soovid pakkumist, täida allolev vorm.</p>
+
+    <form action="mailto:sinuemail@domeen.ee" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Sinu nimi" required><br>
+      <input type="email" name="email" placeholder="Sinu e-post" required><br>
+      <textarea name="message" rows="5" placeholder="Sinu sõnum..." required></textarea><br>
+      <input type="submit" value="Saada">
+    </form>
+  </main>
+
+</body>
+</html>
