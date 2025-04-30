@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Koolitused – IT-Koolitused</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #1b263b;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.6em;
+      margin-bottom: 40px;
+    }
+    .course {
+      background-color: #1e2a3a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      display: grid;
+      grid-template-columns: 1fr 6fr 1fr 1fr 1fr 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+    .course-img img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .course-content h2 {
+      margin: 0 0 10px;
+      font-size: 1.4em;
+      color: #a7c8ff;
+    }
+    .course-content p {
+      margin: 0;
+      font-size: 0.95em;
+    }
+    .course-meta {
+      font-size: 0.9em;
+      color: white;
+      text-align: center;
+    }
+    .learn-more {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.95em;
+      text-decoration: none;
+      text-align: center;
+    }
+    .learn-more:hover {
+      background-color: #0096c7;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Avaleht</a>
+    <a href="meist.html">Meist</a>
+    <a href="koolitused.html">Koolitused</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <main>
+    <h1>Meie koolitused</h1>
+
+    <div class="course">
+      <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+      <div class="course-content">
+        <h2>Tehisintellekt ja automatiseerimine</h2>
+        <p>AI tööriistad (sh ChatGPT), töövoogude automatiseerimine ja tehisaru rakendused turunduses, teeninduses ja kontoritöös.</p>
+      </div>
+      <div class="course-meta">52 tundi</div>
+      <div class="course-meta">Eesti<br>keeles</div>
+      <div class="course-meta">415 €<br>+ km</div>
+      <a class="learn-more" href="#">Vaata lähemalt</a>
+    </div>
+    <div class="course">
+        <div class="course-img"><img src="ai2.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>Canva: lihtsate kujunduste ja infomaterjalide loomine kiirelt ja visuaalselt</h2>
+          <p>Koolitusele on oodatud kõik arvutikasutajad, kes ei puutu igapäevaselt kokku professionaalsete kujundusprogrammidega, kuid vajavad võimalust luua kerge vaevaga kujundusi trüki- või sotsiaalmeedia tarbeks.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>WordPress koolitus alustajale</h2>
+          <p>WordPress on ülekaalukalt kõige populaarsem sisuhaldussüsteem. Koolitusel õpid tegema endale oma enda kodulehte.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>UX/UI algajatele: Figma</h2>
+          <p>Disainioskusi vajatakse laialdaselt nii turunduses, HR-s kui hariduses. Koolitusel õpid Figma funktsioone kasutama ja looma erinevaid pilte.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>Küberturvalisuse baaskursus</h2>
+          <p>Interaktiivse kursuse abil saad selgeks andmekaitse, turvaline autentimine ja õngitsussõnumite vältimise.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>Veebileht Canvaga</h2>
+          <p>Loome kodulehe, mis tõstab ettevõtte usaldust ja kasvatab äri nähtavust.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>Power BI ja visuaalne andmeanalüüs</h2>
+          <p>Visuaalne andmete analüüs ja aruandlus Power BI abil. Koolitus sobib kõigile, kes tegelevad andmete, aruandluse ja äriloogikaga.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">599 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+      <div class="course">
+        <div class="course-img"><img src="ai3.png" alt="AI koolitus"></div>
+        <div class="course-content">
+          <h2>Kuidas kasutada AI tööriistu turunduse ja müügi optimeerimiseks väikeettevõttes</h2>
+          <p>Õpid, kuidas õpetada AI-le sinu ettevõtte sisu loomist, et see oleks kiire ja täpne.</p>
+        </div>
+        <div class="course-meta">52 tundi</div>
+        <div class="course-meta">Eesti<br>keeles</div>
+        <div class="course-meta">415 €<br>+ km</div>
+        <a class="learn-more" href="#">Vaata lähemalt</a>
+      </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <p>Ei leidnud sobivat koolitust? <a href="kontakt.html" style="color: #00b4d8; text-decoration: underline;">Jäta meile teade</a></p>
+      <p>Soovid koolitust oma firmale või grupile? <a href="kontakt.html" style="color: #00b4d8; text-decoration: underline;">Telli koolitus</a></p>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px; font-size: 0.9em;">
+      <p><a href="#" style="color: #00b4d8; text-decoration: underline;">Õppekorraldus ja ostutingimused</a> | <a href="#" style="color: #00b4d8; text-decoration: underline;">Privaatsus- ja kasutustingimused</a></p>
+    </div>
+  </main>
+</body>
+</html>
