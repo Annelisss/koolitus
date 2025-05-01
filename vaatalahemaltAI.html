@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Tehisintellekt ja automatiseerimine – Koolitus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #1b263b;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .course-image {
+      flex: 1 1 300px;
+    }
+    .course-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .course-video {
+      margin-top: 50px;
+    }
+    .course-video iframe {
+      border-radius: 12px;
+    }
+    .course-details {
+      flex: 2 1 600px;
+    }
+    .course-header {
+      margin-bottom: 20px;
+    }
+    .course-header h1 {
+      color: #a7c8ff;
+      margin: 0 0 15px 0;
+      font-size: 2em;
+    }
+    .action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .course-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.95em;
+    }
+    .meta-row {
+      display: flex;
+    }
+    .label {
+      width: 120px;
+      font-weight: bold;
+    }
+    .value {
+      flex: 1;
+    }
+    .info-block {
+      background-color: #1e2a3a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .info-block p {
+      margin: 6px 0;
+      line-height: 1.5em;
+    }
+    .info-block h3 {
+      color: #a7c8ff;
+      margin-top: 10px;
+    }
+    .info-block ul {
+      margin-left: 20px;
+      margin-top: 6px;
+    }
+    .info-block li {
+      margin-bottom: 6px;
+      line-height: 1.5em;
+    }
+    .info-block strong {
+      color: #cce3ff;
+    }
+    .signup-btn {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .signup-btn:hover {
+      background-color: #0096c7;
+    }
+    .bottom-button {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Avaleht</a>
+    <a href="meist.html">Meist</a>
+    <a href="koolitused.html">Koolitused</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="container">
+    <div class="course-image">
+      <img src="ai.png" alt="Tehisintellekti koolitus">
+      <div class="course-video">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/9RPjA8Hbmjs"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="course-details">
+      <div class="course-header">
+        <h1>Tehisintellekt ja automatiseerimine</h1>
+        <div class="action-bar">
+          <a href="registreerukoolitusele.html" class="signup-btn">Registreeru koolitusele</a>
+          <div class="course-meta">
+            <div class="meta-row"><div class="label">Toimumisaeg:</div><div class="value">10. juuni – 28. juuni 2025</div></div>
+            <div class="meta-row"><div class="label">Asukoht:</div><div class="value">Veebikoolitus (Zoom)</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>Kirjeldus:</h3>
+        <p>Õpid tundma erinevaid AI tööriistu (sh ChatGPT), töövoogude automatiseerimist ning tehisintellekti rakendamist igapäevatöös – turunduses, teeninduses ja kontoritöös.</p>
+        <p>Tegemist on praktilise tehisintellekti rakendamise koolitusega kontoritöö lihtsustamiseks ja automatiseerimiseks.</p>
+
+        <h3>Õppe sisu:</h3>
+        <ul>
+          <li><strong>1. Sissejuhatus tehisintellekti ja kontoritöö automatiseerimisse (2 tundi)</strong>
+            <ul>
+              <li>Ülevaade kursuse struktuurist ja õpieesmärkidest.</li>
+              <li>Oli VBA – nüüd AI ja selle roll kontoritöö automatiseerimisel.</li>
+            </ul>
+          </li>
+          <li><strong>2. Statistika ja andmete mõistmine (3 tundi)</strong>
+            <ul>
+              <li>Statistilised meetodid ja rakendused.</li>
+              <li>Andmete visualiseerimine ja lugemisoskuse arendamine.</li>
+            </ul>
+          </li>
+          <li><strong>3. Süsteemne ja algoritmiline mõtlemine (3 tundi)</strong>
+            <ul>
+              <li>Probleemide lahendamine süsteemse mõtlemise kaudu.</li>
+              <li>Küsimuste esitamine – promptid.</li>
+              <li>Algoritmiliste lahenduste kujundamine ja rakendamine.</li>
+            </ul>
+          </li>
+          <li><strong>4. Andmeanalüüs ja suurandmete tõlgendamine (4 tundi)</strong>
+            <ul>
+              <li>Andmeanalüüsi põhimõtted.</li>
+              <li>Andmekaeve ja suurandmete tõlgendamine.</li>
+            </ul>
+          </li>
+          <li><strong>5. IKT-lahenduste arendamine ja rakendamine (3 tundi)</strong>
+            <ul>
+              <li>Liidestused ja koosvõime.</li>
+              <li>Andmekaitse ja autoriõigus.</li>
+            </ul>
+          </li>
+          <li><strong>6. Tootearendus ja -disain (2 tundi)</strong>
+            <ul>
+              <li>Disainimõtlemine kontoritarkvara arenduses.</li>
+              <li>Kasutajakeskne disain ja kasutajatugi.</li>
+            </ul>
+          </li>
+          <li><strong>7. Küberturvalisus kontoritöö automatiseerimises (3 tundi)</strong>
+            <ul>
+              <li>Riskide hindamine ja maandamine.</li>
+              <li>Turvaliste lahenduste rakendamine.</li>
+            </ul>
+          </li>
+          <li><strong>Praktilised töötoad (13 tundi)</strong>
+            <ul>
+              <li>Praktiline rakendamine reaalsetes stsenaariumides.</li>
+              <li>Andmeanalüüs, algoritmid, süsteemide integreerimine ja küberturvalisus.</li>
+            </ul>
+          </li>
+          <li><strong>Kokkuvõte ja lõpp-projekt (2 tundi)</strong>
+            <ul>
+              <li>Kokkuvõte ja teadmiste kinnistamine.</li>
+              <li>Lõppprojekt: osalejate iseseisev töö.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Tehnilised eeldused:</h3>
+        <p>Osalemiseks on vajalik vähemalt algtasemel arvutikasutamise oskus (hiir, klaviatuur, veebilehitsejad, e-post). Moodle'i keskkonna kasutamiseks peab olema:</p>
+        <ul>
+          <li>arvuti või nutiseade</li>
+          <li>hea internetiühendus</li>
+          <li>kõlarid, mikrofon (soovitavalt ka veebikaamera)</li>
+          <li>digitaalne kirjaoskus ja võimalus digiallkirjastada (ID-kaart, Smart-ID või Mobiil-ID)</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Kestus:</strong> 52 tundi</p>
+        <p><strong>Keel:</strong> Eesti keel</p>
+        <p><strong>Hind:</strong> 415 € + km</p>
+      </div>
+
+      <div class="bottom-button">
+        <a href="registreerukoolitusele.html" class="signup-btn">Registreeru koolitusele</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

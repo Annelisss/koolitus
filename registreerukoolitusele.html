@@ -2,11 +2,8 @@
 <html lang="et">
 <head>
   <meta charset="UTF-8">
-  <title>Kontakt – IT-Koolitused</title>
+  <title>Registreeru koolitusele – IT-Koolitused</title>
   <style>
-    html {
-      overflow-y: scroll;
-    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -44,13 +41,14 @@
       font-size: 2em;
       margin-bottom: 20px;
     }
-    input, textarea {
+    input, select, textarea {
       width: 90%;
       padding: 12px;
       margin: 10px 0;
       border: none;
       border-radius: 6px;
       font-size: 1em;
+      box-sizing: border-box;
     }
     input[type="submit"] {
       background-color: #1a4fff;
@@ -78,14 +76,24 @@
   </nav>
 
   <main>
-    <h1>Võta meiega ühendust</h1>
-    <p>Kui sul on küsimusi koolituste kohta või soovid pakkumist, täida allolev vorm.</p>
+    <h1>Registreeru koolitusele</h1>
+    <p>Täida allolev vorm, et registreeruda sobivale koolitusele. Võtame sinuga peatselt ühendust.</p>
 
     <form action="mailto:sinuemail@domeen.ee" method="POST" enctype="text/plain">
       <input type="text" name="name" placeholder="Sinu nimi" required><br>
       <input type="email" name="email" placeholder="Sinu e-post" required><br>
-      <textarea name="message" rows="5" placeholder="Sinu sõnum..." required></textarea><br>
-      <input type="submit" value="Saada">
+      <select name="course" required>
+        <option value="">Vali koolitus</option>
+        <option value="AI ja automaatika tööriistad">AI ja automaatika tööriistad</option>
+        <option value="Canva disainiks">Canva disainiks</option>
+        <option value="WordPress algajatele">WordPress algajatele</option>
+        <option value="UX/UI Figma abil">UX/UI Figma abil</option>
+        <option value="Küberturvalisuse alused">Küberturvalisuse alused</option>
+        <option value="Veebilehe loomine Canvaga">Veebilehe loomine Canvaga</option>
+        <option value="Power BI andmeanalüüsiks">Power BI andmeanalüüsiks</option>
+      </select><br>
+      <textarea name="additional_info" rows="5" placeholder="Täiendav info (nt varasem kogemus, küsimused)"></textarea><br>
+      <input type="submit" value="Registreeru">
     </form>
   </main>
 
