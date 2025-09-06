@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>AI abil eduni</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #1a3d5d;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      padding: 10px 30px;
+    }
+    .breadcrumb a {
+      color: #1a3d5d;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .page-title {
+      padding: 0 30px;
+    }
+    .page-title h2 {
+      margin: 10px 0;
+      color: #1a3d5d;
+      font-size: 28px;
+    }
+    .chapter-nav {
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+    .chapter-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chapter-nav li {
+      background: #dbe9f4;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .chapter-nav li.active {
+      background: #1a3d5d;
+      color: white;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      padding: 10px 30px;
+    }
+    .tab-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background: #e1ecf4;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+    }
+    .tab-button:hover {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button:hover .icon {
+      filter: none;
+    }
+    .tab-button.active {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button.active .icon {
+      filter: none;
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: invert(1);
+      transition: filter 0.2s ease;
+    }
+    .content {
+      display: flex;
+      padding: 20px 30px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .video-box {
+      flex: 1;
+      min-width: 300px;
+    }
+    .video-box iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 6px;
+    }
+    .video-box img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    .lesson-content {
+      flex: 2;
+      min-width: 300px;
+    }
+    .lesson-content h3 {
+      color: #1a3d5d;
+      margin-top: 20px;
+    }
+    .lesson-content ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #1a3d5d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .presentation-link {
+      position: relative;
+      display: block;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+    .presentation-link img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .presentation-hover-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: white;
+      background-color: rgba(26, 61, 93, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .presentation-link:hover .presentation-hover-text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT-Koolitused: õppematerjal</h1>
+    <nav>
+      <a href="index.html">Avaleht</a>
+      <a href="koolitused.html">Koolitused</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="#">Sissejuhatus tehisintellekti</a> / AI abil eduni
+  </div>
+
+  <div class="page-title">
+    <h2>AI abil eduni: Müük ja turundus väikeettevõttele 2025</h2>
+  </div>
+
+  <div class="chapter-nav">
+    <strong>Peatükk: 1/6</strong>
+    <ul>
+      <li class="active">1. Mis on tehisintellekt?</li>
+      <li>2. Kuidas AI muudab müüki</li>
+      <li>3. Turunduse automatiseerimine</li>
+      <li>4. Praktilised tööriistad</li>
+      <li>5. Juhtumiuuring: Edukas kasutus</li>
+      <li>6. Kordamine ja kokkuvõte</li>
+    </ul>
+  </div>
+
+  <div class="tabs">
+    <a href="#" class="tab-button active">
+      <img src="video-icon.png" alt="Video ikoon" class="icon"> Video
+    </a>
+    <a href="1test.html" class="tab-button">
+      <img src="test-icon.png" alt="Testi ikoon" class="icon"> Test
+    </a>
+    <a href="1ülesanded.html" class="tab-button">
+      <img src="task-icon.png" alt="Ülesannete ikoon" class="icon"> Ülesanded
+    </a>
+    <a href="1raamat.html" class="tab-button">
+      <img src="text-icon.png" alt="Teksti ikoon" class="icon"> Raamat
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/-U4Jwe6NL0I" title="YouTube video player" allowfullscreen></iframe>
+      <a href="AIabileduni25.ppsx" target="_blank" class="presentation-link">
+        <img src="aiabileduni25-cover.png" alt="Esitluse eelvaade">
+        <div class="presentation-hover-text">Vaata esitlust</div>
+      </a>
+    </div>
+    <div class="lesson-content">
+      <p>Tehisintellekti (AI) areng on toonud uue ajastu ka väikestele ettevõtetele. Seal, kus varem vajasid turundus ja müügitegevused suuremat meeskonda või suurt eelarvet, on nüüd võimalik saavutada märkimisväärseid tulemusi automatiseeritud tööriistade ja andmepõhise otsustamise kaudu. 2025. aastal ei tähenda AI pelgalt robotit ega keerulist tarkvara – see on igapäevane abimees, mis aitab väikese tiimiga ettevõttel konkureerida suurtega.</p>
+
+      <h3>Mis on tehisintellekt ja kuidas see töötab?</h3>
+      <p>Tehisintellekt tähendab masinate võimet õppida andmete põhjal ja teha otsuseid ilma inimese otsese sekkumiseta. Praktikas tähendab see näiteks seda, et AI võib õppida, millal on parim aeg kliendile reklaami näidata või milline e-kirja pealkiri toob kõige rohkem avamisi.</p>
+
+      <h3>AI praktiline kasutus müügis ja turunduses</h3>
+      <p>Väikeettevõtja jaoks on AI suurim väärtus ajasääst ja sihipärasus. Automatiseeritud e-kirjad, klienditeenindusrobotid ja personaliseeritud veebilehed aitavad paremini jõuda sihtgrupini ja luua usaldust. Näiteks võib AI tööriist nagu Mailchimp AI soovitada, millise sisuga kampaania toimib paremini või millal on kõige tõhusam aeg selle saatmiseks.</p>
+
+      <h3>Näited tööriistadest</h3>
+      <ul>
+        <li><strong>ChatGPT:</strong> Kasutatav klienditeeninduses, sisuloomeks ja korduvatele küsimustele vastamiseks.</li>
+        <li><strong>Canva AI:</strong> Loob visuaalseid materjale kiiremini – sobib sotsiaalmeedia postitusteks, reklaamideks ja esitlusteks.</li>
+        <li><strong>HubSpot ja Mailchimp AI:</strong> Suunavad õiged pakkumised õigetele inimestele, kasutades andmeid ja käitumismustreid.</li>
+      </ul>
+
+      <h3>Kokkuvõte</h3>
+      <p>Tehisintellekt ei asenda inimest, aga see täiendab ja tugevdab sinu turundustegevust. 2025. aastal saab väikese eelarvega ettevõtja luua suurt mõju, kui ta kasutab nutikalt kättesaadavaid AI-vahendeid. Oluline on katsetada, õppida ja võtta kasutusele just need tööriistad, mis toetavad sinu ettevõtte eesmärke.</p>
+  
+      <h3>Soovituslik kirjandus</h3>
+      <ul>
+        <li>Russell, S., & Norvig, P. (2021). Artificial Intelligence: A Modern Approach.</li>
+        <li>Heath, N. (2022). AI in Business: A Practical Guide.</li>
+        <li>Brown, J. (2023). Practical Machine Learning for Entrepreneurs.</li>
+        <li>Online artiklid portaalidest: Harvard Business Review, MIT Technology Review, Towards Data Science.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 IT-Koolitused. Kõik õigused kaitstud.</p>
+    <p>
+      <a href="kasutustingimused.html">Kasutustingimused</a> |
+      <a href="privaatsus.html">Privaatsuspoliitika</a> |
+      <a href="kontakt.html#ada">Ligipääsetavus</a>
+    </p>
+  </footer>
+</body>
+</html>

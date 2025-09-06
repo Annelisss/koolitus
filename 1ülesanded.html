@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>AI abil eduni - Ülesanded</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #1a3d5d;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      padding: 10px 30px;
+    }
+    .breadcrumb a {
+      color: #1a3d5d;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .page-title {
+      padding: 0 30px;
+    }
+    .page-title h2 {
+      margin: 10px 0;
+      color: #1a3d5d;
+      font-size: 28px;
+    }
+    .chapter-nav {
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+    .chapter-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chapter-nav li {
+      background: #dbe9f4;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .chapter-nav li.active {
+      background: #1a3d5d;
+      color: white;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      padding: 10px 30px;
+    }
+    .tab-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background: #e1ecf4;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .tab-button:hover {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button .icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: brightness(0);
+      transition: filter 0.2s ease;
+    }
+    .tab-button:hover .icon {
+      filter: brightness(1000%);
+    }
+    .tab-button.active {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button.active .icon {
+      filter: brightness(1000%);
+    }
+    .tasks {
+      padding: 20px 30px;
+    }
+    .task {
+      background: white;
+      border-left: 5px solid #1a3d5d;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .task h3 {
+      margin-top: 0;
+      color: #1a3d5d;
+    }
+    footer {
+      background-color: #1a3d5d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .task-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .task-step {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .task-step input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #1a3d5d;
+      cursor: pointer;
+    }
+
+    .task-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a3d5d;
+      margin-bottom: 15px;
+    }
+
+    .task-desc {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .task-button {
+      background-color: #ffd43b;
+      color: black;
+      font-weight: bold;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .task-button:hover {
+      background-color: #f4c530;
+    }
+
+    .task-button img {
+      width: 20px;
+      height: 20px;
+    }
+    .tasks-columns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+    
+    .task-column {
+      flex: 1 1 300px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT-Koolitused: õppematerjal</h1>
+    <nav>
+      <a href="index.html">Avaleht</a>
+      <a href="koolitused.html">Koolitused</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="#">Sissejuhatus tehisintellekti</a> / AI abil eduni
+  </div>
+
+  <div class="page-title">
+    <h2>Ülesanded: Kuidas AI aitab turundust ja müüki 2025. aastal</h2>
+  </div>
+
+  <div class="chapter-nav">
+    <strong>Peatükk: 1/6</strong>
+    <ul>
+      <li class="active">1. Mis on tehisintellekt?</li>
+      <li>2. Kuidas AI muudab müüki</li>
+      <li>3. Turunduse automatiseerimine</li>
+      <li>4. Praktilised tööriistad</li>
+      <li>5. Juhtumiuuring: Edukas kasutus</li>
+      <li>6. Kordamine ja kokkuvõte</li>
+    </ul>
+  </div>
+
+  <div class="tabs">
+    <a href="1peatükk.html" class="tab-button">
+      <img src="video-icon.png" alt="Video ikoon" class="icon"> Video
+    </a>
+    <a href="1test.html" class="tab-button">
+      <img src="test-icon.png" alt="Testi ikoon" class="icon"> Test
+    </a>
+    <a href="1ülesanded.html" class="tab-button active">
+      <img src="task-icon.png" alt="Ülesannete ikoon" class="icon"> Ülesanded
+    </a>
+    <a href="1raamat.html" class="tab-button">
+      <img src="text-icon.png" alt="Teksti ikoon" class="icon"> Raamat
+    </a>
+  </div>
+
+  <div class="tasks-columns">
+    <!-- Vasak veerg: 4 ülesannet -->
+    <div class="task-column">
+      <!-- Ülesanne 1 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task1"><label for="task1">1. samm</label></div>
+        <div class="task-title">Ideaalse kliendi profiili loomine ChatGPT abil</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Sisesta oma toote/teenuse kirjeldus ja kasuta ChatGPT-d kliendipersoonade loomiseks (nimi, vanus, amet, vajadused, eesmärgid).<br><br><strong>Väärtus:</strong> Aitab mõista oma sihtklienti ning suunata turundus ja sisu õigesse kohta.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+  
+      <!-- Ülesanne 2 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task2"><label for="task2">2. samm</label></div>
+        <div class="task-title">Müügikirja koostamine AI abil</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Kasuta ChatGPT-d veenva müügikirja/e-kirja kirjutamiseks. Katseta erinevaid toone ja vorminguid.<br><br><strong>Väärtus:</strong> Valmis kasutatav tekst klientidele saatmiseks – ajasääst ja tõhus suhtlus.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+  
+      <!-- Ülesanne 3 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task3"><label for="task3">3. samm</label></div>
+        <div class="task-title">Sotsiaalmeedia postituste genereerimine</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Palu AI-l luua mitmeid postitusi (nt kampaania, uue toote tutvustus) ja lisa Canva abil kujundused.<br><br><strong>Väärtus:</strong> Kiire sisu loomine, visuaalne järjepidevus ja brändi nähtavus.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+  
+      <!-- Ülesanne 4 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task4"><label for="task4">4. samm</label></div>
+        <div class="task-title">30-päevane sisuplaan AI abil</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Kirjelda oma valdkonda ja eesmärki, palu AI-l genereerida kuu sisuplaan (nt blogid, e-kirjad, postitused).<br><br><strong>Väärtus:</strong> Struktureeritud sisuloome ja planeerimine ilma stressita – suurem järjepidevus.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+    </div>
+  
+    <!-- Parem veerg: 3 ülesannet -->
+    <div class="task-column">
+      <!-- Ülesanne 5 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task5"><label for="task5">5. samm</label></div>
+        <div class="task-title">SEO-võtmesõnade ja blogiideede loomine</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Sisesta märksõnad või toote kirjeldus ja palu AI-l pakkuda SEO-sõbralikke blogiideid ning meta-kirjeldusi.<br><br><strong>Väärtus:</strong> Suurem leitavus otsingumootorites, sisuloome toetab turundust.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+  
+      <!-- Ülesanne 6 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task6"><label for="task6">6. samm</label></div>
+        <div class="task-title">Müügivestluse simuleerimine ChatGPT abil</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Simuleeri vestlus AI-ga, kes esineb kliendina. Harjuta toodete esitlemist ja vastuväidete käsitlemist.<br><br><strong>Väärtus:</strong> Arendab enesekindlust ja müügioskusi turvalises keskkonnas.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+  
+      <!-- Ülesanne 7 -->
+      <div class="task-card">
+        <div class="task-step"><input type="checkbox" id="task7"><label for="task7">7. samm</label></div>
+        <div class="task-title">AI tööriistade valik oma ärile</div>
+        <div class="task-desc"><strong>Ülesanne:</strong> Kirjelda oma äri vajadusi ja palu ChatGPT-l soovitada 2–3 sobivat AI tööriista (turundus, disain, analüütika vms).<br><br><strong>Väärtus:</strong> Säästad aega ja raha õigete tööriistade leidmisel ning kasutamisel.</div>
+        <a href="#" class="task-button"><img src="task-icon.png" alt=""> Tee ülesanne</a>
+      </div>
+    </div>
+  </div>
+    
+  <footer>
+    <p>© 2025 IT-Koolitused. Kõik õigused kaitstud.</p>
+    <p>
+      <a href="kasutustingimused.html">Kasutustingimused</a> |
+      <a href="privaatsus.html">Privaatsuspoliitika</a> |
+      <a href="kontakt.html#ada">Ligipääsetavus</a>
+    </p>
+  </footer>
+</body>
+</html>

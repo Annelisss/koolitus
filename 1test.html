@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Test – AI abil eduni</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #1a3d5d;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      padding: 10px 30px;
+    }
+    .breadcrumb a {
+      color: #1a3d5d;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .page-title {
+      padding: 0 30px;
+    }
+    .page-title h2 {
+      margin: 10px 0;
+      color: #1a3d5d;
+      font-size: 28px;
+    }
+    .chapter-nav {
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+    .chapter-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chapter-nav li {
+      background: #dbe9f4;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .chapter-nav li.active {
+      background: #1a3d5d;
+      color: white;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      padding: 10px 30px;
+    }
+    .tab-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background: #e1ecf4;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+    }
+    .tab-button.active {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button .icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: brightness(0);
+      transition: filter 0.2s ease;
+    }
+    .tab-button:hover {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button:hover .icon, .tab-button.active .icon {
+      filter: brightness(1000%);
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+    .lesson-content {
+      max-width: 700px;
+      width: 100%;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .question {
+      margin-bottom: 25px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+      color: #1a3d5d;
+    }
+    label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+    .form-button {
+      background-color: #1a3d5d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .form-button:hover {
+      background-color: #16344f;
+    }
+    .error-message {
+      color: #b30000;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    footer {
+      background-color: #1a3d5d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT-Koolitused: õppematerjal</h1>
+    <nav>
+      <a href="index.html">Avaleht</a>
+      <a href="koolitused.html">Koolitused</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="#">Sissejuhatus tehisintellekti</a> / AI abil eduni
+  </div>
+
+  <div class="page-title">
+    <h2>AI abil eduni: Müük ja turundus väikeettevõttele 2025</h2>
+  </div>
+
+  <div class="chapter-nav">
+    <strong>Peatükk: 1/6</strong>
+    <ul>
+      <li class="active">1. Mis on tehisintellekt?</li>
+      <li>2. Kuidas AI muudab müüki</li>
+      <li>3. Turunduse automatiseerimine</li>
+      <li>4. Praktilised tööriistad</li>
+      <li>5. Juhtumiuuring: Edukas kasutus</li>
+      <li>6. Kordamine ja kokkuvõte</li>
+    </ul>
+  </div>
+
+  <div class="tabs">
+    <a href="1peatükk.html" class="tab-button"><img src="video-icon.png" class="icon"> Video</a>
+    <a href="1test.html" class="tab-button active"><img src="test-icon.png" class="icon"> Test</a>
+    <a href="1ülesanded.html" class="tab-button"><img src="task-icon.png" class="icon"> Ülesanded</a>
+    <a href="1raamat.html" class="tab-button"><img src="text-icon.png" class="icon"> Raamat</a>
+  </div>
+
+  <div class="content">
+    <div class="lesson-content">
+      <p>Juhised: Vali igale küsimusele üks õige vastus ja vajuta lõpuks nuppu "Saada".</p>
+      <form id="testForm">
+        <div class="question" data-question="q1">
+          <h3>1. Mis on tehisintellekti (AI) peamine väärtus väikeettevõtjale?</h3>
+          <label><input type="radio" name="q1" value="a"> See võimaldab asendada kogu meeskonna.</label>
+          <label><input type="radio" name="q1" value="b"> See aitab säästa aega ja suunata tegevusi sihtgrupile.</label>
+          <label><input type="radio" name="q1" value="c"> See elimineerib vajaduse klientidega suhelda.</label>
+          <label><input type="radio" name="q1" value="d"> See garanteerib topeltmüügi.</label>
+        </div>
+
+        <div class="question" data-question="q2">
+          <h3>2. Millist rolli täidab Mailchimp AI turunduses?</h3>
+          <label><input type="radio" name="q2" value="a"> Soovitab sobiva sisu ja ajastuse e-kirjade kampaaniates.</label>
+          <label><input type="radio" name="q2" value="b"> Disainib ettevõtte kodulehe.</label>
+          <label><input type="radio" name="q2" value="c"> Halda ettevõtte personali.</label>
+          <label><input type="radio" name="q2" value="d"> Loob ettevõtte juriidilised dokumendid.</label>
+        </div>
+
+        <div class="question" data-question="q3">
+          <h3>3. Milline väide kirjeldab kõige paremini AI kasutust 2025. aasta väikeettevõtluses?</h3>
+          <label><input type="radio" name="q3" value="a"> AI ei ole seotud väikeettevõtlusega.</label>
+          <label><input type="radio" name="q3" value="b"> AI muutub kättesaamatuks ja keeruliseks kasutada.</label>
+          <label><input type="radio" name="q3" value="c"> AI muutub igapäevaseks abimeheks ja toetab otsustamist.</label>
+          <label><input type="radio" name="q3" value="d"> AI asendab 100% turundustööd.</label>
+        </div>
+
+        <div class="question" data-question="q4">
+          <h3>4. Kuidas aitab ChatGPT väikeettevõtteid igapäevatöös?</h3>
+          <label><input type="radio" name="q4" value="a"> Aitab vastata korduvatele küsimustele ja luua sisu.</label>
+          <label><input type="radio" name="q4" value="b"> Kirjutab automaatselt kõik ettevõtte lepingud.</label>
+          <label><input type="radio" name="q4" value="c"> Loob ainult programmeerimiskoode.</label>
+          <label><input type="radio" name="q4" value="d"> Asendab täielikult kliendihalduri ametikoha.</label>
+        </div>
+
+        <div class="question" data-question="q5">
+          <h3>5. Mille poolest on Canva AI kasulik väikeettevõtte turunduses?</h3>
+          <label><input type="radio" name="q5" value="a"> Aitab koostada raamatupidamisaruandeid.</label>
+          <label><input type="radio" name="q5" value="b"> Kiirendab visuaalide loomist ja aitab disainida reklaammaterjale.</label>
+          <label><input type="radio" name="q5" value="c"> Jälgib töötajate tööaega ja puhkust.</label>
+          <label><input type="radio" name="q5" value="d"> Optimeerib veebilehe laadimiskiirust.</label>
+        </div>
+
+        <button type="submit" class="form-button">Saada</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 IT-Koolitused. Kõik õigused kaitstud.</p>
+    <p>
+      <a href="kasutustingimused.html">Kasutustingimused</a> |
+      <a href="privaatsus.html">Privaatsuspoliitika</a> |
+      <a href="kontakt.html#ada">Ligipääsetavus</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("testForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      document.querySelectorAll(".error-message").forEach(el => el.remove());
+
+      const questions = ["q1", "q2", "q3", "q4", "q5"];
+      let allAnswered = true;
+
+      questions.forEach(key => {
+        const selected = document.querySelector(`input[name="${key}"]:checked`);
+        const questionDiv = document.querySelector(`.question[data-question="${key}"]`);
+
+        if (!selected) {
+          allAnswered = false;
+          const error = document.createElement("div");
+          error.classList.add("error-message");
+          error.textContent = "Palun vali vastus!";
+          questionDiv.appendChild(error);
+        } else {
+          localStorage.setItem(key, selected.value);
+        }
+      });
+
+      if (allAnswered) {
+        window.location.href = "1tulemus.html";
+      }
+    });
+  </script>
+</body>
+</html>

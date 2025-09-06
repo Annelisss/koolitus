@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Testi tulemused – AI abil eduni</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #1a3d5d;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    header nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #666;
+      padding: 10px 30px;
+    }
+    .breadcrumb a {
+      color: #1a3d5d;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .page-title {
+      padding: 0 30px;
+    }
+    .page-title h2 {
+      margin: 10px 0;
+      color: #1a3d5d;
+      font-size: 28px;
+    }
+    .chapter-nav {
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+    .chapter-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chapter-nav li {
+      background: #dbe9f4;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .chapter-nav li.active {
+      background: #1a3d5d;
+      color: white;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      padding: 10px 30px;
+    }
+    .tab-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      background: #e1ecf4;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+    }
+    .tab-button:hover {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button:hover .icon {
+      filter: none;
+    }
+    .tab-button.active {
+      background: #1a3d5d;
+      color: white;
+    }
+    .tab-button.active .icon {
+      filter: none;
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: invert(1);
+      transition: filter 0.2s ease;
+    }
+
+    .result-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .progress-ring {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+    }
+    .progress-ring circle {
+      fill: none;
+      stroke-width: 12;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+    .progress-bg {
+      stroke: #e6e6e6;
+    }
+    .progress-bar {
+      stroke: #28a745;
+      transition: stroke-dasharray 0.5s ease;
+    }
+    .progress-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+    }
+    .feedback {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .summary {
+      background: #f1f9ff;
+      padding: 15px;
+      border-left: 4px solid #1a3d5d;
+      text-align: left;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+    .button-group {
+      margin-top: 30px;
+    }
+    .button-group a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 20px;
+      background: #1a3d5d;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button-group a.disabled {
+      background: #888;
+      pointer-events: none;
+      cursor: default;
+    }
+    footer {
+      background-color: #1a3d5d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT-Koolitused: õppematerjal</h1>
+    <nav>
+      <a href="index.html">Avaleht</a>
+      <a href="koolitused.html">Koolitused</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="#">Sissejuhatus tehisintellekti</a> / AI abil eduni
+  </div>
+
+  <div class="page-title">
+    <h2>Testi tulemused: Peatükk 1</h2>
+  </div>
+
+  <div class="chapter-nav">
+    <strong>Peatükk: 1/6</strong>
+    <ul>
+      <li class="active">1. Mis on tehisintellekt?</li>
+      <li>2. Kuidas AI muudab müüki</li>
+      <li>3. Turunduse automatiseerimine</li>
+      <li>4. Praktilised tööriistad</li>
+      <li>5. Juhtumiuuring: Edukas kasutus</li>
+      <li>6. Kordamine ja kokkuvõte</li>
+    </ul>
+  </div>
+
+  <div class="tabs">
+    <a href="1peatükk.html" class="tab-button"><img src="video-icon.png" class="icon"> Video</a>
+    <a href="1test.html" class="tab-button"><img src="test-icon.png" class="icon"> Test</a>
+    <a href="1ülesanded.html" class="tab-button"><img src="task-icon.png" class="icon"> Ülesanded</a>
+    <a href="1raamat.html" class="tab-button"><img src="text-icon.png" class="icon"> Raamat</a>
+  </div>
+
+  <div class="result-container">
+    <div class="progress-ring">
+      <svg width="120" height="120">
+        <circle class="progress-bg" r="50" cx="60" cy="60"></circle>
+        <circle class="progress-bar" r="50" cx="60" cy="60" stroke-dasharray="0 314"></circle>
+      </svg>
+      <div class="progress-text" id="progress-percent">0%</div>
+    </div>
+
+    <div class="feedback" id="feedback-text">Laen tulemust...</div>
+    <div class="summary" id="summary-text"></div>
+
+    <div class="button-group">
+      <a href="1test.html" onclick="resetTest()">Tee uuesti</a>
+      <a href="1ülesanded.html" id="next-link" class="disabled">Järgmine peatükk</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 IT-Koolitused. Kõik õigused kaitstud.</p>
+    <p>
+      <a href="kasutustingimused.html">Kasutustingimused</a> |
+      <a href="privaatsus.html">Privaatsuspoliitika</a> |
+      <a href="kontakt.html#ada">Ligipääsetavus</a>
+    </p>
+  </footer>
+
+  <script>
+    const correctAnswers = {
+      q1: "b",
+      q2: "a",
+      q3: "c",
+      q4: "a",
+      q5: "b"
+    };
+
+    const answerTexts = {
+      q1: { a: "Vale vastus A", b: "See aitab säästa aega ja suunata tegevusi sihtgrupile.", c: "Vale vastus C" },
+      q2: { a: "Soovitab sobiva sisu ja ajastuse e-kirjade kampaaniates.", b: "Vale vastus B", c: "Vale vastus C" },
+      q3: { a: "Vale vastus A", b: "AI ei ole seotud väikeettevõtlusega.", c: "AI muutub igapäevaseks abimeheks ja toetab otsustamist." },
+      q4: { a: "Aitab vastata korduvatele küsimustele ja luua sisu.", b: "Vale vastus B", c: "Vale vastus C" },
+      q5: { a: "Vale vastus A", b: "Kiirendab visuaalide loomist ja aitab disainida reklaammaterjale.", c: "Vale vastus C" }
+    };
+
+    const userAnswers = {
+      q1: localStorage.getItem("q1"),
+      q2: localStorage.getItem("q2"),
+      q3: localStorage.getItem("q3"),
+      q4: localStorage.getItem("q4"),
+      q5: localStorage.getItem("q5")
+    };
+
+    const allEmpty = Object.values(userAnswers).every(v => !v || v === "undefined");
+    if (allEmpty) {
+      document.getElementById("feedback-text").textContent = "Tundub, et test ei ole veel tehtud.";
+      document.getElementById("summary-text").innerHTML = "<p>Palun täida test enne tulemuste vaatamist.</p>";
+      document.getElementById("progress-percent").textContent = "0%";
+      document.querySelector(".progress-bar").style.stroke = "#999";
+    } else {
+      let correct = 0;
+      for (let key in correctAnswers) {
+        if (userAnswers[key] === correctAnswers[key]) {
+          correct++;
+        }
+      }
+
+      const total = 5;
+      const percent = Math.round((correct / total) * 100);
+      const bar = document.querySelector(".progress-bar");
+      const text = document.getElementById("progress-percent");
+      const feedback = document.getElementById("feedback-text");
+      const summary = document.getElementById("summary-text");
+      const nextLink = document.getElementById("next-link");
+
+      const radius = 50;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (percent / 100) * circumference;
+      bar.setAttribute("stroke-dasharray", `${circumference - offset} ${circumference}`);
+      bar.style.stroke = percent >= 80 ? "#28a745" : "#dc3545";
+      text.textContent = `${percent}%`;
+
+      function buildAnswerList() {
+        let resultHtml = "<ul>";
+        for (let key in correctAnswers) {
+          const number = key.substring(1);
+          const userKey = userAnswers[key];
+          const correctKey = correctAnswers[key];
+          if (!userKey) {
+            resultHtml += `<li role="listitem" style="color:#b30000">❌ Küsimus ${number}: Vastus puudus</li>`;
+          } else if (userKey !== correctKey) {
+            resultHtml += `<li role="listitem" style="color:#b30000">❌ Küsimus ${number}: Sinu vastus – ${answerTexts[key][userKey]}</li>`;
+          } else {
+            resultHtml += `<li role="listitem" style="color:#28a745">✔️ Küsimus ${number}: ${answerTexts[key][userKey]}</li>`;
+          }
+        }
+        resultHtml += "</ul>";
+        return resultHtml;
+      }
+
+      if (percent === 100) {
+        feedback.textContent = "Suurepärane! Kõik vastused olid õiged!";
+        summary.innerHTML = buildAnswerList();
+        nextLink.classList.remove("disabled");
+      } else if (percent >= 80) {
+        feedback.textContent = "Tubli! Kõik vastused olid peaaegu õiged!";
+        summary.innerHTML = `<p>Siin on sinu vastused:</p>${buildAnswerList()}`;
+        nextLink.classList.remove("disabled");
+      } else {
+        feedback.textContent = `Said ${correct} / ${total} õigesti. Proovi uuesti!`;
+        summary.innerHTML = `<p>Tutvu uuesti peatüki sisuga. Järgmise peatüki avanemiseks pead vähemalt 80% õigeid vastuseid saama.</p>${buildAnswerList()}`;
+      }
+    }
+
+    function resetTest() {
+      Object.keys(userAnswers).forEach(k => localStorage.removeItem(k));
+    }
+  </script>
+</body>
+</html>
